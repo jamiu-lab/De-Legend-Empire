@@ -1,25 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products - My POD Store</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Products</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="cart.html">Cart 🛒</a>
-    </nav>
-  </header>
+  <head>
+    <!-- Character Encoding -->
+    <meta charset="UTF-8" />
 
-  <section class="product-grid" id="product-list">
-    <!-- Products will be loaded here by JS -->
-  </section>
+    <!-- Mobile Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <script src="js/products.js"></script>
-</body>
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="JUST ORDER - Your one-stop online store for trendy print-on-demand products, from t-shirts to mugs. Fast shipping, hassle-free shopping."
+    />
+    <meta
+      name="keywords"
+      content="JUST ORDER, print on demand, POD store, custom t-shirts, custom mugs, Nigeria online shop, POD products"
+    />
+    <meta name="author" content="JUST ORDER" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta
+      property="og:title"
+      content="JUST ORDER - Print-on-Demand Online Store"
+    />
+    <meta
+      property="og:description"
+      content="Shop custom POD products with ease. JUST ORDER and get fast delivery!"
+    />
+    <meta property="og:image" content="https://yourdomain.com/logo.png" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="JUST ORDER - Online POD Store" />
+    <meta
+      name="twitter:description"
+      content="Shop trendy POD products. JUST ORDER and relax!"
+    />
+    <meta name="twitter:image" content="https://yourdomain.com/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <title>JUST ORDER | Print-on-Demand Online Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="toggle-menu.css" />
+    <link rel="stylesheet" href="media-screen.css" />
+
+    <!-- Structured Data (JSON-LD for Google Rich Results) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "JUST ORDER",
+        "url": "https://yourdomain.com",
+        "logo": "https://yourdomain.com/logo.png",
+        "description": "JUST ORDER is your one-stop POD store with fast shipping.",
+        "sameAs": [
+          "https://facebook.com/justorder",
+          "https://instagram.com/justorder"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header id="mainHeader" class="header">
+      <div class="menu-toggle">
+        <span id="menuToggle" class="toggle">☰</span>
+      </div>
+      <div class="header-nav">
+        <a href="index.html">home</a>
+        <a href="#">in stock</a>
+        <a href="#">store+</a>
+        <a href="#">collection</a>
+      </div>
+      <a href="index.html" class="logo">just order</a>
+      <nav class="icons">
+        <!-- country-select -->
+        <div class="country-dropdown">
+          <button id="selected-country" class="dropdown-toggle">
+            <img src="https://flagcdn.com/us.svg" alt="US" width="24" />
+          </button>
+          <ul class="dropdown-menu" id="country-menu">
+            <li data-value="us">
+              <img src="https://flagcdn.com/us.svg" alt="US" width="20" />
+              United States
+            </li>
+            <li data-value="uk">
+              <img src="https://flagcdn.com/gb.svg" alt="UK" width="20" />
+              United Kingdom
+            </li>
+            <li data-value="de">
+              <img src="https://flagcdn.com/de.svg" alt="Germany" width="20" />
+              Germany
+            </li>
+            <li data-value="ca">
+              <img src="https://flagcdn.com/ca.svg" alt="Canada" width="20" />
+              Canada
+            </li>
+            <li data-value="au">
+              <img
+                src="https://flagcdn.com/au.svg"
+                alt="Australia"
+                width="20"
+              />
+              Australia
+            </li>
+          </ul>
+        </div>
+        <!-- User Icon -->
+        <div class="user-account">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+          </svg>
+        </div>
+
+        <!-- only search control in header -->
+        <!-- <div class="search-wrapper" id="searchWrapper">
+          <button
+            id="searchToggle"
+            class="search-toggle"
+            aria-expanded="false"
+            aria-label="Open search"
+            type="button"
+          > -->
+        <!-- minimal professional search SVG -->
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+            </svg>
+          </button>
+
+          <form
+            id="searchForm"
+            class="search-form"
+            role="search"
+            autocomplete="off"
+          >
+            <input
+              id="searchInput"
+              class="search-input"
+              name="q"
+              type="search"
+              placeholder="Search products..."
+              aria-label="Search products"
+            />
+            <button type="submit" class="search-submit">Search</button>
+          </form>
+        </div> -->
+
+        <!-- Cart Icon -->
+        <div id="cartToggle" class="cart-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M6 6h15l-1.5 9h-13z"></path>
+            <circle cx="9" cy="20" r="1.5"></circle>
+            <circle cx="18" cy="20" r="1.5"></circle>
+          </svg>
+          <span class="cart-badge">0</span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- nav-drawer -->
+    <aside id="navDrawer" class="nav-drawer">
+      <div class="nav-menu">
+        <div id="closeDrawer" class="close-drawer">X</div>
+        <a href="#">home</a>
+        <a href="#">in stock</a>
+        <a href="#">store+</a>
+        <a href="#">collection</a>
+
+        <div class="menu-item">
+          <p style="font-size: 0.95rem">COLORS:</p>
+          <div class="colors">
+            <div class="color" style="background: black"></div>
+            <div class="color" style="background: gray"></div>
+            <div class="color" style="background: red"></div>
+            <div class="color" style="background: blue"></div>
+            <div class="color" style="background: green"></div>
+            <div class="color" style="background: #999"></div>
+            <div class="color" style="background: khaki"></div>
+          </div>
+
+          <p style="margin-top: 3rem; font-size: 0.95">CATEGORIES:</p>
+          <div class="categories">
+            <img src="https://via.placeholder.com/40" alt="Hoodie" />
+            <img src="https://via.placeholder.com/40" alt="Sweatpants" />
+            <img src="https://via.placeholder.com/40" alt="Shorts" />
+            <img src="https://via.placeholder.com/40" alt="Tracksuit" />
+          </div>
+        </div>
+
+        <div class="login">
+          <div class="user-accounts">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="4"></circle>
+              <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+            </svg>
+          </div>
+          <div class="login"><p>login</p></div>
+        </div>
+      </div>
+    </aside>
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- Cart Drawer -->
+    <aside class="cart-drawer" id="cartDrawer">
+      <div class="cart-body" id="cartBody">
+        <div id="closeCart" class="cancel">X</div>
+        <div>
+          <div class="empty-text">Your cart is empty</div>
+          <a href="index.html">
+            <button class="continue-btn">Continue Shopping</button></a
+          >
+        </div>
+      </div>
+    </aside>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+  </body>
 </html>

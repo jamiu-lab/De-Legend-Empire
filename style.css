@@ -378,7 +378,7 @@ header.scrolled .country-select {
   transform: translateX(-50%); /*perfectly centered horizontally*/
   transition: color 0.4s ease;
   cursor: pointer;
-  background-image: linear-gradient(135deg, #555 0%, #555 1000%);
+  background-image: linear-gradient(135deg, #e3dede 0%, #e3dede 1000%);
   background-repeat: no-repeat;
   background-size: 0% 100%;
   background-position: bottom left;
@@ -387,7 +387,7 @@ header.scrolled .country-select {
 
 .shop-now-btn:hover {
   background-size: 100% 100%;
-  color: #fff;
+  color: #000;
 }
 
 .about-store {
@@ -629,7 +629,7 @@ main {
   transform: translateX(-50%); /*perfectly centered horizontally*/
   transition: color 0.4s ease;
   cursor: pointer;
-  background-image: linear-gradient(135deg, #555 0%, #555 1000%);
+  background-image: linear-gradient(135deg, #e3dede 0%, #e3dede 1000%);
   background-repeat: no-repeat;
   background-size: 0% 100%;
   background-position: bottom left;
@@ -638,7 +638,7 @@ main {
 
 .view-more:hover {
   background-size: 100% 100%;
-  color: #fff;
+  color: #000;
 }
 
 @media (max-width: 768px) {
@@ -685,9 +685,9 @@ main {
 
 .text-image-container .text h2 {
   font-size: 2rem;
-  font-weight: 700;
   color: #111;
   margin-bottom: 1rem;
+  font-family: Bronze Stone Free, Arial;
 }
 
 .text-image-container .text p {
@@ -711,7 +711,7 @@ main {
   color: #000;
   transition: color 0.4s ease;
   cursor: pointer;
-  background-image: linear-gradient(135deg, #555 0%, #555 1000%);
+  background-image: linear-gradient(135deg, #e3dede 0%, #e3dede 1000%);
   background-repeat: no-repeat;
   background-size: 0% 100%;
   background-position: bottom left;
@@ -720,7 +720,6 @@ main {
 
 .view-more-btn:hover {
   background-size: 100% 100%;
-  color: #fff;
 }
 
 /* ✅ Responsive for small screens */
@@ -786,9 +785,10 @@ main {
 
 .location-container .text h2 {
   font-size: 2rem;
-  font-weight: 700;
   color: #000;
   margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-family: Bronze Stone Free, Arial;
 }
 
 .location-container .text p {
@@ -817,7 +817,7 @@ main {
   text-decoration: none;
   transition: color 0.4s ease;
   cursor: pointer;
-  background-image: linear-gradient(135deg, #555 0%, #555 1000%);
+  background-image: linear-gradient(135deg, #e3dede 0%, #e3dede 1000%);
   background-repeat: no-repeat;
   background-size: 0% 100%;
   background-position: bottom left;
@@ -826,7 +826,6 @@ main {
 
 .get-direction:hover {
   background-size: 100% 100%;
-  color: #fff;
 }
 
 .view-more-button-action {
@@ -835,7 +834,6 @@ main {
 
 .view-more-button-action:hover {
   background-size: 100% 100%;
-  color: #fff;
 }
 
 /* ✅ Mobile responsiveness */
@@ -854,7 +852,9 @@ main {
   }
 
   .location-container .text h2 {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: Bronze Stone Free, Arial;
   }
 
   .location-container .text p {
