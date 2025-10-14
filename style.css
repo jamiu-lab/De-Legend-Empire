@@ -98,8 +98,7 @@ header.scrolled .country-select {
 
 /* never display on all screen except big screen */
 @media (max-width: 1000px) {
-  .header-nav,
-  .header a {
+  .header-nav {
     display: none;
   }
 }
