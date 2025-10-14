@@ -186,15 +186,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
-  /* -----------------------------
-   * CAROUSEL (setup placeholder)
-   * ----------------------------- */
-  const carousel = document.getElementById("carousel");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
-
-  if (carousel && prevBtn && nextBtn) {
-    // Add your carousel logic here
-  }
 });
