@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="toggle-menu.css" />
     <link rel="stylesheet" href="media-screen.css" />
-
+    <link rel="stylesheet" href="products.css" />
     <!-- Structured Data (JSON-LD for Google Rich Results) -->
     <script type="application/ld+json">
       {
@@ -70,7 +70,7 @@
     </script>
   </head>
   <body>
-    <header id="mainHeader" class="header">
+    <header id="mainHeader" class="header products-page">
       <div class="menu-toggle">
         <span id="menuToggle" class="toggle">☰</span>
       </div>
@@ -172,8 +172,8 @@
     <aside id="navDrawer" class="nav-drawer">
       <div class="nav-menu">
         <div id="closeDrawer" class="close-drawer">X</div>
-        <a href="#">home</a>
-        <a href="#">in stock</a>
+        <a href="index.html">home</a>
+        <a href="products.html">in stock</a>
         <a href="#">store+</a>
         <a href="#">collection</a>
 
@@ -225,5 +225,171 @@
     </aside>
     <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
+
+    <!-- Main content: Product Grid -->
+    <main>
+      <!-- <h2 class="section-title">Our Products</h2> -->
+      <section class="product-grid" role="list" aria-label="Product list">
+        <!-- Product cards will be inserted here by JS -->
+      </section>
+    </main>
+
+    <!-- Quick View Modal -->
+    <div class="modal-backdrop" id="modalBackdrop">
+      <div
+        class="modal"
+        role="dialog"
+        aria-labelledby="modalTitle"
+        aria-modal="true"
+      >
+        <button class="close-btn" id="closeModal" aria-label="Close modal">
+          &times;
+        </button>
+        <div class="modal-image">
+          <img id="modalImg" src="" alt="" />
+        </div>
+        <div class="modal-body">
+          <h3 id="modalTitle"></h3>
+          <p id="modalPrice"></p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <section class="footer-container">
+        <!-- Newsletter -->
+        <div class="footer-section newsletter">
+          <h4>NEWSLETTER</h4>
+          <form>
+            <input type="email" placeholder="Your email" />
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+          <div class="social-icons">
+            <!-- Facebook -->
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="18" cy="6" r="1" />
+              </svg>
+            </a>
+            <!-- Pinterest -->
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M8 20c-1-4 1-6 1-8-3-4 1-9 6-8s5 7 2 9c-2 1-4-1-3-3 1-3-3-4-4-1-1 2 1 4 1 6 0 2-1 3-3 5z"
+                />
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M23 7s-.2-1.5-.8-2.2c-.7-.9-1.5-.9-1.8-1C18.5 3.5 12 3.5 12 3.5s-6.5 0-8.4.3c-.3 0-1.1.1-1.8 1C1.2 5.5 1 7 1 7S1 8.7 1 10.5v3c0 1.8.2 3.5.8 4.2.7.9 1.5.9 1.8 1 1.9.3 8.4.3 8.4.3s6.5 0 8.4-.3c.3 0 1.1-.1 1.8-1 .6-.7.8-2.4.8-4.2v-3C23 8.7 23 7 23 7z"
+                />
+                <polygon points="9.5,15.5 15.5,12 9.5,8.5" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Address -->
+        <div class="footer-section">
+          <h4>CONTACT</h4>
+          <p>Nina Wynn: Fine, Permanent & Piercing Jewelry</p>
+          <p>2247 Federal Blvd</p>
+          <p>Denver, CO 80211</p>
+          <p>Phone: 720-594-5897</p>
+        </div>
+
+        <!-- Hours
+        <div class="footer-section">
+          <h4>HOURS</h4>
+          <p>Wed - Fri: 11AM - 6PM</p>
+          <p>Saturday: 10AM - 5PM</p>
+          <p>Sunday: 10AM - 4PM</p>
+          <p>Mon - Tue: Closed</p>
+        </div> -->
+
+        <!-- Support -->
+        <div class="footer-section">
+          <h4>SUPPORT <span class="arrow">▼</span></h4>
+          <ul>
+            <li><a href="#">FAQ's</a></li>
+            <li><a href="#">Sizing Information</a></li>
+            <li><a href="#">Warranty</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms Of Service</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Gold
+        <div class="footer-section">
+          <h4>GOLD <span class="arrow">▼</span></h4>
+          <ul>
+            <li><a href="#">+ Hoops</a></li>
+            <li><a href="#">+ Studs</a></li>
+            <li><a href="#">Necklaces</a></li>
+            <li><a href="#">Rings</a></li>
+            <li><a href="#">Permanent Jewelry Chains</a></li>
+          </ul>
+        </div> -->
+
+        <!-- Fashion -->
+        <div class="footer-section">
+          <h4>FASHION <span class="arrow">▼</span></h4>
+          <ul>
+            <li><a href="#">Earrings</a></li>
+            <li><a href="#">+ Hoops</a></li>
+            <li><a href="#">+ Studs</a></li>
+            <li><a href="#">+ Charms</a></li>
+            <li><a href="#">Bracelets</a></li>
+            <li><a href="#">Necklaces</a></li>
+            <li><a href="#">Rings</a></li>
+          </ul>
+        </div>
+
+        <!-- Shop by Stone -->
+        <div class="footer-section">
+          <h4>SHOP BY COLORS <span class="arrow">▼</span></h4>
+          <ul>
+            <li><a href="#">Amethyst</a></li>
+            <li><a href="#">Aquamarine</a></li>
+            <li><a href="#">Emerald</a></li>
+            <li><a href="#">Labradorite</a></li>
+            <li><a href="#">Moonstone</a></li>
+            <li><a href="#">Opal</a></li>
+            <li><a href="#">Ruby</a></li>
+            <li><a href="#">Tourmaline</a></li>
+            <li><a href="#">Turquoise</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>🇳🇬 Nigeria (NG)</p>
+        <p>
+          Copyright © 2025, De Legend Empire. All rights reserved. See our terms
+          of use and privacy notice.
+        </p>
+        <p>Powered by Vision Digital</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+    <script src="search.js"></script>
+    <script src="product.js"></script>
   </body>
 </html>

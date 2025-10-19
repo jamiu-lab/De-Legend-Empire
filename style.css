@@ -1,3 +1,4 @@
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -71,6 +72,25 @@ header.scrolled .header-nav a,
 header.scrolled .icons svg,
 header.scrolled .menu-toggle,
 header.scrolled .country-select {
+  color: black;
+  stroke: black;
+}
+
+/* Products page header styling */
+.products-page .logo,
+.products-page .header-nav a,
+.products-page .icons svg,
+.products-page .menu-toggle,
+.products-page .country-select {
+  color: #999;
+  stroke: #999;
+}
+
+.products-page.scrolled .logo,
+.products-page.scrolled .header-nav a,
+.products-page.scrolled .icons svg,
+.products-page.scrolled .menu-toggle,
+.products-page.scrolled .country-select {
   color: black;
   stroke: black;
 }
@@ -191,6 +211,7 @@ header.scrolled .country-select {
   border-radius: 50%;
   padding: 2px 6px;
   cursor: pointer;
+  display: none;
 }
 
 /* Cart Drawer */
@@ -230,9 +251,101 @@ header.scrolled .country-select {
 
 .cart-body {
   display: flex;
-  justify-content: center;
-  padding-top: 50%;
+  flex-direction: column;
+  padding: 4rem 1rem 1rem 1rem;
   text-align: center;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Responsive cart item image */
+@media (max-width: 768px) {
+  .cart-item img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-item img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.cart-item-details {
+  flex: 1;
+  text-align: left;
+}
+
+.cart-item-name {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 0.25rem;
+}
+
+.qty-btn {
+  background: #f0f0f0;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.qty-btn:hover {
+  background: #ddd;
+}
+
+.cart-item-quantity {
+  font-size: 0.9rem;
+  color: #666;
+  min-width: 50px;
+  text-align: center;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.delete-btn:hover {
+  background: #f0f0f0;
+}
+
+.delete-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: #666;
 }
 
 /* Overlay */
