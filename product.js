@@ -6,8 +6,7 @@ const products = [
     name: "Official Jogger Black",
     price: "₦15,000",
     image: "fila/IMG-20241006-WA0002.JPG", // Replace with real image path
-    srcset:
-      "fila/IMG-20241006-WA0002.JPG 320w, products/product1-640.jpg 640w, products/product1-1200.jpg 1200w",
+    srcset: "fila/IMG-20241006-WA0002.JPG",
     alt: "Official Jogger Black - front view",
     tag: "NEW",
   },
@@ -16,17 +15,15 @@ const products = [
     name: "Classic Hoodie",
     price: "₦25,000",
     image: "fila/IMG-20241006-WA0001.JPG",
-    srcset:
-      "fila/IMG-20241006-WA0001.JPG 320w, products/product2-640.jpg 640w, products/product2-1200.jpg 1200w",
+    srcset: "fila/IMG-20241006-WA0001.JPG",
     alt: "Classic Hoodie - front view",
   },
   {
     id: 3,
     name: "Round Neck T-Shirt",
     price: "₦12,000",
-    image: "products/product3.jpg",
-    srcset:
-      "products/product3-320.jpg 320w, products/product3-640.jpg 640w, products/product3-1200.jpg 1200w",
+    image: "fila/IMG-20241006-WA0001.JPG",
+    srcset: "fila/IMG-20241006-WA0001.JPG",
     alt: "Round Neck T-Shirt - front view",
     tag: "SOLD OUT",
   },
@@ -34,18 +31,16 @@ const products = [
     id: 4,
     name: "Casual Shorts",
     price: "₦18,000",
-    image: "products/product4.jpg",
-    srcset:
-      "products/product4-320.jpg 320w, products/product4-640.jpg 640w, products/product4-1200.jpg 1200w",
+    image: "fila/IMG-20241006-WA0001.JPG",
+    srcset: "fila/IMG-20241006-WA0001.JPG",
     alt: "Casual Shorts - front view",
   },
   {
     id: 5,
     name: "Flannel Shirt",
     price: "₦22,000",
-    image: "products/product5.jpg",
-    srcset:
-      "products/product5-320.jpg 320w, products/product5-640.jpg 640w, products/product5-1200.jpg 1200w",
+    image: "fila/IMG-20241006-WA0001.JPG",
+    srcset: "fila/IMG-20241006-WA0001.JPG",
     alt: "Flannel Shirt - front view",
     tag: "NEW",
   },
@@ -53,9 +48,8 @@ const products = [
     id: 6,
     name: "Tracksuit",
     price: "₦35,000",
-    image: "products/product6.jpg",
-    srcset:
-      "products/product6-320.jpg 320w, products/product6-640.jpg 640w, products/product6-1200.jpg 1200w",
+    image: "fila/IMG-20241006-WA0001.JPG",
+    srcset: "fila/IMG-20241006-WA0001.JPG",
     alt: "Tracksuit - front view",
   },
   {
@@ -63,17 +57,15 @@ const products = [
     name: "Agbada Traditional",
     price: "₦50,000",
     image: "products/product7.jpg",
-    srcset:
-      "products/product7-320.jpg 320w, products/product7-640.jpg 640w, products/product7-1200.jpg 1200w",
+    srcset: "fila/IMG-20241006-WA0001.JPG",
     alt: "Agbada Traditional - front view",
   },
   {
     id: 8,
     name: "Fila Cap",
     price: "₦8,000",
-    image: "products/product8.jpg",
-    srcset:
-      "products/product8-320.jpg 320w, products/product8-640.jpg 640w, products/product8-1200.jpg 1200w",
+    image: "fila/IMG-20241006-WA0001.JPG",
+    srcset: "fila/IMG-20241006-WA0001.JPG",
     alt: "Fila Cap - front view",
   },
 ];
