@@ -159,8 +159,6 @@ if (productGrid) {
     card.innerHTML = `
       <div class="product-image">
         <img src="${product.image}"
-             srcset="${product.srcset}"
-             sizes="(max-width: 480px) 48vw, (max-width: 768px) 46vw, 23vw"
              alt="${product.alt}"
              loading="lazy" decoding="async" />
         ${
