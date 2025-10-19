@@ -15,9 +15,9 @@ const products = [
     id: 2,
     name: "Classic Hoodie",
     price: "₦25,000",
-    image: "products/product2.jpg",
+    image: "fila/IMG-20241006-WA0001.JPG",
     srcset:
-      "products/product2-320.jpg 320w, products/product2-640.jpg 640w, products/product2-1200.jpg 1200w",
+      "fila/IMG-20241006-WA0001.JPG 320w, products/product2-640.jpg 640w, products/product2-1200.jpg 1200w",
     alt: "Classic Hoodie - front view",
   },
   {
