@@ -183,6 +183,25 @@ if (productGrid) {
       <div class="product-info">
         <h3 class="product-title">${product.name}</h3>
         <p class="product-price">${product.price}</p>
+        <div class="mobile-actions">
+          <button class="btn ghost" onclick="openModal(products[${
+            product.id - 1
+          }])" aria-label="Quick view ${product.name}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+          <button class="btn ghost" onclick="addToCart(${
+            product.id
+          })" aria-label="Add ${product.name} to cart">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M6 6h15l-1.5 9h-13z"/>
+              <circle cx="9" cy="20" r="1.5"/>
+              <circle cx="18" cy="20" r="1.5"/>
+            </svg>
+          </button>
+        </div>
       </div>
     `;
     productGrid.appendChild(card);

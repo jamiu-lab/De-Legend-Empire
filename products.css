@@ -234,6 +234,21 @@
   border: 0;
 }
 
+/* Mobile actions */
+.mobile-actions {
+  display: none;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-top: 8px;
+}
+.mobile-actions .btn.ghost {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid #e2e8f0;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+}
+
 /* Responsive breakpoints (4 → 3 → 2 → 2) */
 @media (max-width: 1200px) {
   .product-grid {
@@ -243,6 +258,14 @@
 @media (max-width: 900px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  .mobile-actions {
+    display: flex;
+  }
+  .card-overlay {
+    display: none;
   }
 }
 @media (max-width: 480px) {
@@ -274,4 +297,11 @@
 /* keep modal hidden by default, show via .active */
 .modal-backdrop.active {
   display: flex;
+}
+
+/* Mobile modal layout */
+@media (max-width: 760px) {
+  .modal {
+    flex-direction: column;
+  }
 }
